@@ -19,7 +19,7 @@ public class CmdDeOP implements CommandExecutor {
             if(sender.hasPermission("xcommands.deop")) {
                 if(args.length == 0) {
                     if(sender instanceof Player) {
-                        if(sender.isOp() == false){
+                        if(sender.isOp() == true){
                             Player p = (Player) sender;
                             p.setOp(false);
                             p.sendMessage(prefix + ChatColor.GRAY + "You are now not " + ChatColor.AQUA + "OP");
@@ -33,13 +33,13 @@ public class CmdDeOP implements CommandExecutor {
                 } else if(args.length == 1) {
                     Player p1 = Bukkit.getServer().getPlayer(args[0]);
                     if(p1 != null) {
-                        if(p1.isOp() == false){
+                        if(p1.isOp() == true){
                             p1.setOp(false);
                             sender.sendMessage(prefix + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " now not " + ChatColor.AQUA + "OP");
                             p1.sendMessage(prefix + ChatColor.GRAY + "You were taken " + ChatColor.AQUA + "OP");
                             return false;
                         } else {
-                            sender.sendMessage(error + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + "dont have " + ChatColor.AQUA + "OP");
+                            sender.sendMessage(error + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " dont have " + ChatColor.AQUA + "OP");
                         }
                     } else {
                         sender.sendMessage(error + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " is not online!");
