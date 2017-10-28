@@ -46,22 +46,22 @@ public class CmdGameMode implements CommandExecutor {
                         if(args[0].equalsIgnoreCase("survival") || args[0].equalsIgnoreCase("0")) {
                             Player p = (Player) sender;
                             p.setGameMode(GameMode.SURVIVAL);
-                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Survival");
+                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Survival");
                             return false;
                         } else if(args[0].equalsIgnoreCase("creative") || args[0].equalsIgnoreCase("1")) {
                             Player p = (Player) sender;
                             p.setGameMode(GameMode.CREATIVE);
-                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Creative");
+                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Creative");
                             return false;
                         } else if(args[0].equalsIgnoreCase("adventure") || args[0].equalsIgnoreCase("2")) {
                             Player p = (Player) sender;
                             p.setGameMode(GameMode.ADVENTURE);
-                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Adventure");
+                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Adventure");
                             return false;
                         } else if(args[0].equalsIgnoreCase("spectator") || args[0].equalsIgnoreCase("3")) {
                             Player p = (Player) sender;
                             p.setGameMode(GameMode.SPECTATOR);
-                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Spectator");
+                            p.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Spectator");
                             return false;
                         } else if(args[0].equalsIgnoreCase("list")){
                             sender.sendMessage(ChatColor.GRAY + "List of " + ChatColor.AQUA + "gamemods:");
@@ -95,30 +95,30 @@ public class CmdGameMode implements CommandExecutor {
                         }
                         if (args[0].equalsIgnoreCase("survival") || args[0].equalsIgnoreCase("0")) {
                             p2.setGameMode(GameMode.SURVIVAL);
-                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Survival " + ChatColor.GRAY + "by " + ChatColor.AQUA +
+                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Survival " + ChatColor.GRAY + "by " + ChatColor.AQUA +
                                     sender.getName());
-                            sender.sendMessage(prefix + ChatColor.GRAY + "You change gamemode to " + ChatColor.AQUA + "Survival" + ChatColor.GRAY + " for " + ChatColor.AQUA +
+                            sender.sendMessage(prefix + ChatColor.GRAY + "You changed gamemode to " + ChatColor.AQUA + "Survival" + ChatColor.GRAY + " for " + ChatColor.AQUA +
                                     args[1]);
                             return false;
                         } else if (args[0].equalsIgnoreCase("creative") || args[0].equalsIgnoreCase("1")) {
                             p2.setGameMode(GameMode.CREATIVE);
-                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Creative " + ChatColor.GRAY + "by " + ChatColor.AQUA +
+                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Creative " + ChatColor.GRAY + "by " + ChatColor.AQUA +
                                     sender.getName());
-                            sender.sendMessage(prefix + ChatColor.GRAY + "You change gamemode to " + ChatColor.AQUA + "Creative" + ChatColor.GRAY + " for " + ChatColor.AQUA +
+                            sender.sendMessage(prefix + ChatColor.GRAY + "You changed gamemode to " + ChatColor.AQUA + "Creative" + ChatColor.GRAY + " for " + ChatColor.AQUA +
                                     args[1]);
                             return false;
                         } else if (args[0].equalsIgnoreCase("adventure") || args[0].equalsIgnoreCase("2")) {
                             p2.setGameMode(GameMode.ADVENTURE);
-                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Adventure " + ChatColor.GRAY + "by " + ChatColor.AQUA +
+                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Adventure " + ChatColor.GRAY + "by " + ChatColor.AQUA +
                                     sender.getName());
-                            sender.sendMessage(prefix + ChatColor.GRAY + "You change gamemode to " + ChatColor.AQUA + "Adventure" + ChatColor.GRAY + " for " + ChatColor.AQUA +
+                            sender.sendMessage(prefix + ChatColor.GRAY + "You changed gamemode to " + ChatColor.AQUA + "Adventure" + ChatColor.GRAY + " for " + ChatColor.AQUA +
                                     args[1]);
                             return false;
                         } else if (args[0].equalsIgnoreCase("spectator") || args[0].equalsIgnoreCase("3")) {
                             p2.setGameMode(GameMode.SPECTATOR);
-                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode change to " + ChatColor.AQUA + "Spectator " + ChatColor.GRAY + "by " + ChatColor.AQUA +
+                            p2.sendMessage(prefix + ChatColor.GRAY + "Your gamemode has been changed to " + ChatColor.AQUA + "Spectator " + ChatColor.GRAY + "by " + ChatColor.AQUA +
                                     sender.getName());
-                            sender.sendMessage(prefix + ChatColor.GRAY + "You change gamemode to " + ChatColor.AQUA + "Spectator" + ChatColor.GRAY + " for " + ChatColor.AQUA +
+                            sender.sendMessage(prefix + ChatColor.GRAY + "You changed gamemode to " + ChatColor.AQUA + "Spectator" + ChatColor.GRAY + " for " + ChatColor.AQUA +
                                     args[1]);
                             return false;
                         } else if (args[0].equalsIgnoreCase("list")) {
