@@ -3,11 +3,11 @@ package xcommands;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import xcommands.commands.CmdDeOP;
-import xcommands.commands.CmdGameMode;
-import xcommands.commands.CmdKill;
-import xcommands.commands.CmdOP;
+import xcommands.commands.*;
+import xcommands.listeners.MsgJoin;
+import xcommands.listeners.MsgLeave;
 
 public class Main extends JavaPlugin {
 
@@ -29,6 +29,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         descriptionCheck();
         commandLoad();
+        listenerLoad();
     }
 
     public void descriptionCheck() {
@@ -51,7 +52,13 @@ public class Main extends JavaPlugin {
         getCommand("op").setExecutor(new CmdOP());
         getCommand("deop").setExecutor(new CmdDeOP());
         getCommand("gm").setExecutor(new CmdGameMode());
-
+        getCommand("heal").setExecutor(new CmdHeal());
+        getCommand("feed").setExecutor(new CmdFeed());
     }
 
+    public void listenerLoad() {
+        PluginManager pm = Bukkit.getPluginManager();
+        pm.registerEvents(new MsgJoin(), this);
+        pm.registerEvents(new MsgLeave(), this);
+    }
 }
