@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="xCommands:jar">
+    <output-path>$USER_HOME$/Documents/MyPlugins/</output-path>
+    <root id="archive" name="xCommands.jar">
+      <element id="module-output" name="xCommands" />
+    </root>
+  </artifact>
+</component>

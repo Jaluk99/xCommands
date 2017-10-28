@@ -1,0 +1,61 @@
+name: xCommands
+version: 0.1
+description: Commands plugin for your server
+authors: [Jaluk]
+website: http://jaluk.pl/
+
+main: xcommands.Main
+database: false
+
+commands:
+  help:
+    description: Show all commands
+    aliases: [commands, pomoc]
+    permission: xcommands.help
+  kill:
+    description: Kill yourself or another player
+    aliases: [zabij]
+    permission: xcommands.kill
+  op:
+    description: Op yourself or another player
+    permission: xcommands.op
+  deop:
+    description: De-Op yourself or another player
+    permission: xcommands.deop
+  #burningdeaths:
+    #description: Policz ile razy sie spaliles.
+    #aliases: [burning_deaths, burningDeaths]
+    #permission: inferno.burningdeaths
+    #usage: |
+      #/<komenda> [gracz]
+      #Example: /<command> - see how many times you have burned to death
+      #Example: /<command> CaptainIce - see how many times CaptainIce has burned to death
+
+permissions:
+  xcommands.*:
+    description: Gives access to all permissions
+    children:
+      xcommands.help: true
+      xcommands.kill: true
+      xcommands.op: true
+      xcommands.deop: true
+  xcommands.help:
+    description: Gives access to help command
+    default: op
+    xcommands.kill:
+      description: Gives access to kill command
+      default: op
+    xcommands.op:
+      description: Gives access to op commands
+      default: op
+    xcommands.deop:
+      description: Gives access to de-op commands
+      default: op
+  #inferno.burningdeaths:
+    #description: Pozwala Ci na sprawdzanie ile razy sie spaliles
+    #default: true
+  #inferno.burningdeaths.others:
+    #description: Pozwala Ci na sprawdzanie ile razy inni sie spalili
+    #default: op
+    #children:
+      #inferno.burningdeaths: true
