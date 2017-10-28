@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d13f2ae3-34a3-4814-b162-d6d0943b4dfd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xcommands/commands/CmdDeOP.java" afterPath="$PROJECT_DIR$/src/xcommands/commands/CmdDeOP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xcommands/commands/CmdKill.java" afterPath="$PROJECT_DIR$/src/xcommands/commands/CmdKill.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xcommands/commands/CmdOP.java" afterPath="$PROJECT_DIR$/src/xcommands/commands/CmdOP.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -40,8 +41,8 @@
       <file leaf-file-name="CmdKill.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdKill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+            <state relative-caret-position="714">
+              <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,8 +53,8 @@
       <file leaf-file-name="CmdOP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdOP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="770">
+              <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CmdDeOP.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CmdDeOP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdDeOP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="107">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +101,11 @@
         <option value="$PROJECT_DIR$/src/xcommands/Permissions.java" />
         <option value="$PROJECT_DIR$/message.yml" />
         <option value="$PROJECT_DIR$/config.yml" />
-        <option value="$PROJECT_DIR$/src/xcommands/commands/CmdKill.java" />
         <option value="$PROJECT_DIR$/plugin.yml" />
         <option value="$PROJECT_DIR$/src/xcommands/Main.java" />
-        <option value="$PROJECT_DIR$/src/xcommands/commands/CmdOP.java" />
         <option value="$PROJECT_DIR$/src/xcommands/commands/CmdDeOP.java" />
+        <option value="$PROJECT_DIR$/src/xcommands/commands/CmdOP.java" />
+        <option value="$PROJECT_DIR$/src/xcommands/commands/CmdKill.java" />
       </list>
     </option>
   </component>
@@ -366,24 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdKill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/xcommands/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -394,10 +377,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdKill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdOP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="770">
+          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -406,11 +399,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xcommands/commands/CmdDeOP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="107">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

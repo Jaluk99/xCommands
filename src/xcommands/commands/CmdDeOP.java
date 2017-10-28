@@ -16,7 +16,9 @@ public class CmdDeOP implements CommandExecutor {
         String error = ChatColor.RED + "xCommands | ";
 
         if(cmd.getName().equalsIgnoreCase("deop")) {
-            if(sender.hasPermission("xcommands.deop")) {
+            if(!(sender.hasPermission("xcommands.deop"))) {
+                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.deop");
+            } else {
                 if(args.length == 0) {
                     if(sender instanceof Player) {
                         if(sender.isOp() == true){
@@ -47,8 +49,6 @@ public class CmdDeOP implements CommandExecutor {
                 } else if(args.length > 1) {
                     sender.sendMessage(error + ChatColor.GRAY + "Use " + ChatColor.AQUA + "/deop [player]");
                 }
-            } else {
-                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.deop");
             }
         }
         return false;

@@ -16,7 +16,9 @@ public class CmdOP implements CommandExecutor {
         String error = ChatColor.RED + "xCommands | ";
 
         if(cmd.getName().equalsIgnoreCase("op")) {
-            if(sender.hasPermission("xcommands.op")) {
+            if(!(sender.hasPermission("xcommands.op"))) {
+                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.op");
+            } else {
                 if(args.length == 0) {
                     if(sender instanceof Player) {
                         if(sender.isOp() == false){
@@ -47,8 +49,6 @@ public class CmdOP implements CommandExecutor {
                 } else if(args.length > 1) {
                     sender.sendMessage(error + ChatColor.GRAY + "Use " + ChatColor.AQUA + "/op [player]");
                 }
-            } else {
-                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.op");
             }
         }
         return false;

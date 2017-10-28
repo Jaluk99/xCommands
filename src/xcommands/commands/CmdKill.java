@@ -16,7 +16,9 @@ public class CmdKill implements CommandExecutor{
         String error = ChatColor.RED + "xCommands | ";
 
         if(cmd.getName().equalsIgnoreCase("kill")) {
-            if(sender.hasPermission("xcommands.kill")) {
+            if(!(sender.hasPermission("xcommands.kill"))) {
+                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.kill");
+            } else {
                 if(args.length == 0) {
                     if(sender instanceof  Player) {
                         Player p = (Player) sender;
@@ -39,8 +41,6 @@ public class CmdKill implements CommandExecutor{
                 } else if(args.length > 1) {
                     sender.sendMessage(error + ChatColor.GRAY + "Use " + ChatColor.AQUA + "/kill [player]");
                 }
-            } else {
-                sender.sendMessage(error + ChatColor.GRAY + "You don't have permission: " + ChatColor.AQUA + "xcommands.kill");
             }
         }
         return false;
