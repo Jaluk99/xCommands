@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import xcommands.commands.CmdDeOP;
+import xcommands.commands.CmdGameMode;
 import xcommands.commands.CmdKill;
 import xcommands.commands.CmdOP;
 
@@ -49,6 +50,7 @@ public class Main extends JavaPlugin {
         getCommand("kill").setExecutor(new CmdKill());
         getCommand("op").setExecutor(new CmdOP());
         getCommand("deop").setExecutor(new CmdDeOP());
+        getCommand("gm").setExecutor(new CmdGameMode());
 
     }
 

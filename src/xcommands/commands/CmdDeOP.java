@@ -38,7 +38,7 @@ public class CmdDeOP implements CommandExecutor {
                         if(p1.isOp() == true){
                             p1.setOp(false);
                             sender.sendMessage(prefix + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " now not " + ChatColor.AQUA + "OP");
-                            p1.sendMessage(prefix + ChatColor.GRAY + "You were taken " + ChatColor.AQUA + "OP");
+                            p1.sendMessage(prefix + ChatColor.GRAY + "You were taken " + ChatColor.AQUA + "OP " + ChatColor.GRAY + "by " + ChatColor.AQUA + sender.getName());
                             return false;
                         } else {
                             sender.sendMessage(error + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " dont have " + ChatColor.AQUA + "OP");

@@ -38,7 +38,7 @@ public class CmdOP implements CommandExecutor {
                         if(p1.isOp() == false){
                             p1.setOp(true);
                             sender.sendMessage(prefix + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " now " + ChatColor.AQUA + "OP");
-                            p1.sendMessage(prefix + ChatColor.GRAY + "You are now " + ChatColor.AQUA + "OP");
+                            p1.sendMessage(prefix + ChatColor.GRAY + "You are now " + ChatColor.AQUA + "OP " + ChatColor.GRAY + "by " + ChatColor.AQUA + sender.getName());
                             return false;
                         } else {
                             sender.sendMessage(error + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " already have " + ChatColor.AQUA + "OP");

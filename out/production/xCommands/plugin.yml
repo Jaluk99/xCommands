@@ -22,6 +22,10 @@ commands:
   deop:
     description: De-Op yourself or another player
     permission: xcommands.deop
+  gm:
+    description: Change gamemode yourself or another player
+    aliases: [gamemode]
+    permission: xcommands.gm
   #burningdeaths:
     #description: Policz ile razy sie spaliles.
     #aliases: [burning_deaths, burningDeaths]
@@ -39,6 +43,7 @@ permissions:
       xcommands.kill: true
       xcommands.op: true
       xcommands.deop: true
+      xcommands.gm: true
   xcommands.help:
     description: Gives access to help command
     default: op
@@ -50,6 +55,9 @@ permissions:
       default: op
     xcommands.deop:
       description: Gives access to de-op commands
+      default: op
+    xcommands.gm:
+      description: Gives access to gamemode commands
       default: op
   #inferno.burningdeaths:
     #description: Pozwala Ci na sprawdzanie ile razy sie spaliles
