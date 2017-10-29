@@ -5,12 +5,16 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import xcommands.commands.*;
+import xcommands.file.ConfigFile;
 import xcommands.listeners.MsgJoin;
 import xcommands.listeners.MsgLeave;
 
+
 public class Main extends JavaPlugin {
 
+    private static ConfigFile config;
     PluginDescriptionFile pdf = this.getDescription();
 
     @Override
@@ -28,8 +32,10 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         descriptionCheck();
+        configSystem();
         commandLoad();
         listenerLoad();
+
     }
 
     public void descriptionCheck() {
@@ -47,6 +53,7 @@ public class Main extends JavaPlugin {
         }
     }
 
+    //Command System
     public void commandLoad() {
         getCommand("kill").setExecutor(new CmdKill());
         getCommand("op").setExecutor(new CmdOP());
@@ -56,9 +63,25 @@ public class Main extends JavaPlugin {
         getCommand("feed").setExecutor(new CmdFeed());
     }
 
+    //Listener System
     public void listenerLoad() {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new MsgJoin(), this);
         pm.registerEvents(new MsgLeave(), this);
+    }
+
+    //Config System
+    public static ConfigFile getConfigFile() {
+        return config;
+    }
+
+    private void configSystem() {
+        if(!getDataFolder().exists()) {
+            getDataFolder().mkdirs();
+        }
+
+        config = new ConfigFile(this, "op");
+        config = new ConfigFile(this, "config");
+        config = new ConfigFile(this, "users");
     }
 }
