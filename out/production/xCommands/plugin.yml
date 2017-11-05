@@ -1,8 +1,8 @@
 name: xCommands
 version: 0.1
 description: Commands plugin for your server
-authors: [Jaluk]
-website: http://jaluk.pl/
+authors: [xDevoo]
+website: http://jlukas.pl/
 
 main: xcommands.Main
 database: false
@@ -24,16 +24,24 @@ commands:
     permission: xcommands.deop
   gm:
     description: Change gamemode yourself or another player
-    aliases: [gamemode]
+    aliases: [gamemode, tryb]
     permission: xcommands.gm
   heal:
     description: Heal yourself or another player
-    aliases: [healted]
+    aliases: [healted, ulecz]
     permission: xcommands.heal
   feed:
     description: Feed yourself or another player
-    aliases: [food]
+    aliases: [food, nakarm]
     permission: xcommands.feed
+  weather:
+    description: Change weather on world
+    aliases: [pogoda]
+    permission: xcommands.weather
+  time:
+    description: Change time on world
+    aliases: [czas]
+    permission: xcommands.time
   #burningdeaths:
     #description: Policz ile razy sie spaliles.
     #aliases: [burning_deaths, burningDeaths]
@@ -54,6 +62,8 @@ permissions:
       xcommands.gm: true
       xcommands.heal: true
       xcommands.feed: true
+      xcommands.weather: true
+      xcommands.time: true
   xcommands.help:
     description: Gives access to help command
     default: op
@@ -74,6 +84,12 @@ permissions:
       default: op
     xcommands.feed:
       description: Gives access to feed commands
+      default: op
+    xcommands.weather:
+      description: Gives access to weather commands
+      default: op
+    xcommands.time:
+      description: Gives access to time commands
       default: op
   #inferno.burningdeaths:
     #description: Pozwala Ci na sprawdzanie ile razy sie spaliles

@@ -21,7 +21,7 @@ public class CmdOP implements CommandExecutor {
             } else {
                 if(args.length == 0) {
                     if(sender instanceof Player) {
-                        if(sender.isOp() == false){
+                        if(!sender.isOp()){
                             Player p = (Player) sender;
                             p.setOp(true);
                             p.sendMessage(prefix + ChatColor.GRAY + "You are now " + ChatColor.AQUA + "OP");
@@ -35,7 +35,7 @@ public class CmdOP implements CommandExecutor {
                 } else if(args.length == 1) {
                     Player p1 = Bukkit.getServer().getPlayer(args[0]);
                     if(p1 != null) {
-                        if(p1.isOp() == false){
+                        if(!p1.isOp()){
                             p1.setOp(true);
                             sender.sendMessage(prefix + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " now " + ChatColor.AQUA + "OP");
                             p1.sendMessage(prefix + ChatColor.GRAY + "You are now " + ChatColor.AQUA + "OP " + ChatColor.GRAY + "by " + ChatColor.AQUA + sender.getName());

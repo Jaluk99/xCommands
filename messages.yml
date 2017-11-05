@@ -1,0 +1,14 @@
+prefix: '&6xCommands | '
+error: '&4xCommands | '
+
+you-must-be-a-player: '&7You must be a &3Player!'
+no-permission: '&7You don''t have &3permission!'
+
+join-message: '&7Player &3%player% &7join server'
+quit-message: '&7Player &3%player% &7leave server'
+
+player-no-op-list: '&7You are not a &3op list!'
+
+use-weather: '&7Use &3/weather <sun/storm> [world]'
+use-weather-sun: '&7weather changed to &3sun'
+use-weather-storm: '&7weather changed to &3storm'

@@ -6,14 +6,15 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import xcommands.Main;
 
 public class CmdDeOP implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
-        String prefix = ChatColor.GOLD + "xCommands | ";
-        String error = ChatColor.RED + "xCommands | ";
+        String prefix = (String) Main.getMessages().getCfg().get("prefix");
+        String error = (String) Main.getMessages().getCfg().get("error");
 
         if(cmd.getName().equalsIgnoreCase("deop")) {
             if(!(sender.hasPermission("xcommands.deop"))) {
@@ -21,7 +22,7 @@ public class CmdDeOP implements CommandExecutor {
             } else {
                 if(args.length == 0) {
                     if(sender instanceof Player) {
-                        if(sender.isOp() == true){
+                        if(sender.isOp()){
                             Player p = (Player) sender;
                             p.setOp(false);
                             p.sendMessage(prefix + ChatColor.GRAY + "You are now not " + ChatColor.AQUA + "OP");
@@ -35,7 +36,7 @@ public class CmdDeOP implements CommandExecutor {
                 } else if(args.length == 1) {
                     Player p1 = Bukkit.getServer().getPlayer(args[0]);
                     if(p1 != null) {
-                        if(p1.isOp() == true){
+                        if(p1.isOp()){
                             p1.setOp(false);
                             sender.sendMessage(prefix + ChatColor.GRAY + "Player " + ChatColor.AQUA + args[0] + ChatColor.GRAY + " now not " + ChatColor.AQUA + "OP");
                             p1.sendMessage(prefix + ChatColor.GRAY + "You were taken " + ChatColor.AQUA + "OP " + ChatColor.GRAY + "by " + ChatColor.AQUA + sender.getName());
